@@ -1,0 +1,20 @@
+<h1> DBZ Personajes </h1>
+<hr>
+
+<div class="row">
+  <div class="col"> <!--Aquí tenemos la lista la cual envía un evento cada vez que pulsamos el boton de la X-->
+    <app-dbz-list [characterList]="characters"
+    (onDelete)="onDeleteCharacter($event)"></app-dbz-list>
+  </div>
+  <div class="col">
+
+    <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+   <!-- <app-dbz-list></app-dbz-list> -->
+
+   <!-- <app-dbz-list [characterList]="characters"
+     (onDelete)="onDeleteCharacter($event)"></app-dbz-list> -->
+
+  </div>
+
+
+</div>
